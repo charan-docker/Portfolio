@@ -7,25 +7,6 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <style>
-   .hero-portrait-inner {
-    position: relative;
-    width: 250px;      /* adjust as you like */
-    height: 330px;     /* adjust as you like */
-    border-radius: 999px;  /* strong oval */
-    overflow: hidden;      /* hide anything outside the oval */
-}
-
-/* make the image fill the whole oval */
-.hero-portrait-inner img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
-    display: block;
-}
-
     :root {
       --bg-main: #0b1120;
       --bg-surface: #0f172a;
@@ -300,19 +281,24 @@
       width: 100%;
     }
 
+    /* Portrait image */
     .hero-portrait-inner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3 / 4;
       border-radius: 999px;
       overflow: hidden;
-      background: linear-gradient(145deg, #020617, #020617);
-      aspect-ratio: 3/4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #4b5563;
-      font-size: 0.9rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      background: #020617;
       border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    .hero-portrait-inner img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .hero-portrait-tag {
@@ -513,17 +499,19 @@
       border-color: rgba(251, 191, 36, 0.35);
     }
 
+    /* PROJECT THUMB WITH IMAGE */
     .project-thumb {
       height: 150px;
-      background: linear-gradient(135deg, rgba(15, 23, 42, 1), rgba(30, 64, 175, 0.9), rgba(251, 191, 36, 0.28));
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-start;
-      padding: 0.9rem 1.1rem;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: rgba(248, 250, 252, 0.85);
+      overflow: hidden;
+      padding: 0;
+      background: none;
+    }
+
+    .project-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .project-body {
@@ -821,7 +809,7 @@
             <a href="#certifications">Certificates</a>
             <a href="#contact">Contact</a>
           </div>
-          <a herf="resumecs.pdf" class="btn btn-outline nav-cta" target="_blank" rel="noopener">Resume</a>
+          <a href="resumecs.pdf" class="btn btn-outline nav-cta" target="_blank" rel="noopener">Resume</a>
         </nav>
       </div>
     </header>
@@ -839,7 +827,7 @@
               Building intelligent, scalable systems at the intersection of software, AI/ML, and embedded electronics.
             </p>
             <p class="hero-summary">
-              Software-focused electronics and communication engineering student with hands-on experience in Java, Python, full‑stack concepts, AI/ML pipelines, IoT automation, and embedded–software integrations. Passionate about turning complex ideas into reliable, production-ready solutions.
+              Software-focused electronics and communication engineering student with hands-on experience in Java, Python, full-stack concepts, AI/ML pipelines, IoT automation, and embedded–software integrations. Passionate about turning complex ideas into reliable, production-ready solutions.
             </p>
             <div class="hero-actions">
               <a href="resumecs.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download Resume</a>
@@ -866,9 +854,7 @@
             <div class="hero-portrait-bg"></div>
             <div class="hero-portrait-card">
               <div class="hero-portrait-inner">
-                <img src="ppic.jpg" alt="Bennuri Charan Teja">
-                 
-                <span>Profile Photo</span>
+                <img src="../Pictures/ppic.jpg" alt="Bennuri Charan Teja">
               </div>
               <div class="hero-portrait-tag">
                 <span class="hero-portrait-dot"></span>
@@ -891,16 +877,13 @@
           <div class="about-grid">
             <div class="about-text">
               <p>
-                As a <span class="about-highlight">B.Tech Electronics & Communication Engineering student at KL University</span>, the focus is on building software-first solutions that blend clean architecture with real-world impact. From AI-powered agriculture systems to IoT-based automation, every project is an opportunity to design systems that are both intelligent and dependable. 
+                As a <span class="about-highlight">B.Tech Electronics & Communication Engineering student at KL University</span>, the focus is on building software-first solutions that blend clean architecture with real-world impact. From AI-powered agriculture systems to IoT-based automation, every project is an opportunity to design systems that are both intelligent and dependable.
               </p>
               <p>
-                Skilled in <span class="about-highlight">Java, Python, C, and full‑stack concepts</span>, alongside experience in AI/ML workflows, embedded controllers, and communication systems, there is a consistent emphasis on scalability, robustness, and thoughtful user experience. Whether it is a Java Swing desktop application or a 3D‑CNN model for human activity recognition, attention to detail and end‑to‑end thinking remain constant.
+                Skilled in <span class="about-highlight">Java, Python, C, and full-stack concepts</span>, alongside experience in AI/ML workflows, embedded controllers, and communication systems, there is a consistent emphasis on scalability, robustness, and thoughtful user experience. Whether it is a Java Swing desktop application or AI Integration for Agriculture, attention to detail and end-to-end thinking remain constant.
               </p>
               <p>
-                Collaboration, clarity, and continuous learning define the working style. Enjoy breaking complex problems into structured milestones, communicating decisions clearly with teammates, and iterating quickly based on feedback, all while keeping long‑term maintainability in mind. 
-              </p>
-              <p class="fun-facts">
-                In free time, there is a keen interest in exploring magical storytelling like <span class="about-highlight">Harry Potter</span>, nostalgic Japanese animation such as <span class="about-highlight">Doraemon</span>, and timeless classic humor from <span class="about-highlight">Tom & Jerry</span> — influences that help keep creativity fresh, curious, and imaginative when approaching technical work.
+                Collaboration, clarity, and continuous learning define the working style. Enjoy breaking complex problems into structured milestones, communicating decisions clearly with teammates, and iterating quickly based on feedback, all while keeping long-term maintainability in mind.
               </p>
             </div>
 
@@ -916,13 +899,13 @@
                 <div class="about-meta-label">Profiles</div>
                 <div class="about-meta-value">
                   <div><a href="https://linkedin.com/in/bennuri-charan-teja-b00b89328" target="_blank" rel="noopener">LinkedIn</a></div>
-                  <div><a href="#" target="_blank" rel="noopener">GitHub (to be added)</a></div>
+                  <div><a href="https://github.com/CharanTeja-27" target="_blank" rel="noopener">GitHub</a></div>
                 </div>
               </div>
               <div class="about-meta-item">
                 <div class="about-meta-label">Hobbies</div>
                 <div class="about-meta-value">
-                  Enjoy playing chess and badminton, and listening to music as ways to reset, reflect, and return to projects with a sharper mindset. 
+                  Enjoy playing chess and badminton, and listening to music as ways to reset, reflect, and return to projects with a sharper mindset.
                 </div>
               </div>
             </div>
@@ -936,7 +919,7 @@
           <div class="section-header">
             <h2 class="section-title">Skills</h2>
             <p class="section-subtitle">
-              A balanced mix of programming languages, embedded platforms, design tools, and essential soft skills for building real-world systems. 
+              A balanced mix of programming languages, embedded platforms, design tools, and essential soft skills for building real-world systems.
             </p>
           </div>
 
@@ -962,7 +945,7 @@
                 <span class="tag">Proteus</span>
                 <span class="tag">TinkerCAD</span>
                 <span class="tag">Figma</span>
-                <span class="tag">MATLAB (OTFS)</span>
+                <span class="tag">MATLAB</span>
               </div>
             </div>
 
@@ -970,6 +953,7 @@
               <div class="skill-title">Embedded & Hardware</div>
               <div class="skill-tags">
                 <span class="tag">Arduino</span>
+                <span class="tag">STM32</span>
                 <span class="tag">8051</span>
                 <span class="tag">ESP32</span>
                 <span class="tag">ESP8266</span>
@@ -983,7 +967,6 @@
               <div class="skill-title">AI / ML & Systems</div>
               <div class="skill-tags">
                 <span class="tag">AI Pipelines</span>
-                <span class="tag">3D‑CNN (HAR)</span>
                 <span class="tag">Computer Vision Datasets</span>
                 <span class="tag">Simulation & Modeling</span>
               </div>
@@ -1004,7 +987,7 @@
             <div class="skill-card">
               <div class="skill-title">Domains of Interest</div>
               <div class="skill-tags">
-                <span class="tag">Full‑Stack Concepts</span>
+                <span class="tag">Full-Stack Concepts</span>
                 <span class="tag">IoT Automation</span>
                 <span class="tag">Embedded–Software Integration</span>
                 <span class="tag">Communication Systems</span>
@@ -1021,20 +1004,21 @@
           <div class="section-header">
             <h2 class="section-title">Projects</h2>
             <p class="section-subtitle">
-              A selection of software, AI/ML, and embedded projects that demonstrate the ability to design, prototype, and refine end‑to‑end solutions. 
+              A selection of software, AI/ML, and embedded projects that demonstrate the ability to design, prototype, and refine end-to-end solutions.
             </p>
             <div class="pill">Case Studies</div>
           </div>
 
           <div class="project-grid">
+            <!-- Project 1 -->
             <article class="project-card">
               <div class="project-thumb">
-                NutriConnect – Smart Nutrition
+                <img src="img1.jpg" alt="NutriConnect – Smart Nutrition">
               </div>
               <div class="project-body">
                 <h3 class="project-title">NutriConnect – Smart Nutrition Tracking App</h3>
                 <p class="project-description">
-                  A Figma-designed nutrition tracking system that maps user workflows, input journeys, and data processing pipelines for personalized nutrition insights. 
+                  A Figma-designed nutrition tracking system that maps user workflows, input journeys, and data processing pipelines for personalized nutrition insights.
                 </p>
                 <div class="project-meta">
                   <span class="tag">Figma</span>
@@ -1045,14 +1029,15 @@
               </div>
             </article>
 
+            <!-- Project 2 -->
             <article class="project-card">
               <div class="project-thumb">
-                Java Swing – Sports
+                <img src="img2.jpg" alt="Sports Registration System – Java Swing">
               </div>
               <div class="project-body">
                 <h3 class="project-title">Sports Registration System – Java Swing</h3>
                 <p class="project-description">
-                  Desktop application built with Java Swing to handle event registrations, participant tracking, and structured event data management for sports events. 
+                  Desktop application built with Java Swing to handle event registrations, participant tracking, and structured event data management for sports events.
                 </p>
                 <div class="project-meta">
                   <span class="tag">Java</span>
@@ -1063,14 +1048,35 @@
               </div>
             </article>
 
+            <!-- Project 3 -->
             <article class="project-card">
               <div class="project-thumb">
-                GSM IoT – Water Pump
+                <img src="img3.jpg" alt="ESP32-CAM Live Streaming Robot">
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">ESP32-CAM Live Streaming Robot</h3>
+                <p class="project-description">
+                  A real-time surveillance robot built using an ESP32-CAM module, capable of wireless video streaming and remote motion control. Designed for low-cost monitoring, IoT experimentation, and mobile robotics applications.
+                </p>
+                <div class="project-meta">
+                  <span class="tag">ESP32-CAM</span>
+                  <span class="tag">IoT</span>
+                  <span class="tag">Robotics</span>
+                  <span class="tag">Live Streaming</span>
+                </div>
+                <div class="project-key">Focus: Real-time video transmission, wireless control, embedded systems.</div>
+              </div>
+            </article>
+
+            <!-- Project 4 -->
+            <article class="project-card">
+              <div class="project-thumb">
+                <img src="img4.jpg" alt="GSM-Based Remote Water Pump Controller">
               </div>
               <div class="project-body">
                 <h3 class="project-title">GSM-Based Remote Water Pump Controller</h3>
                 <p class="project-description">
-                  SMS-controlled IoT system using ESP32 and SIM800 modules to remotely operate water pumps, enabling automation in water management. 
+                  SMS-controlled IoT system using ESP32 and SIM800 modules to remotely operate water pumps, enabling automation in water management.
                 </p>
                 <div class="project-meta">
                   <span class="tag">ESP32</span>
@@ -1082,58 +1088,22 @@
               </div>
             </article>
 
+            <!-- Project 5 -->
             <article class="project-card">
               <div class="project-thumb">
-                AI for Agriculture
+                <img src="img5.jpg" alt="End-to-End AI Integration for Indian Agriculture">
               </div>
               <div class="project-body">
                 <h3 class="project-title">End-to-End AI Integration for Indian Agriculture</h3>
                 <p class="project-description">
-                  AI pipeline combining crop monitoring, yield prediction, and price forecasting to support better decision‑making in Indian agricultural ecosystems. 
+                  AI pipeline combining crop monitoring, yield prediction, and price forecasting to support better decision-making in Indian agricultural ecosystems.
                 </p>
                 <div class="project-meta">
                   <span class="tag">AI/ML</span>
                   <span class="tag">Data Pipeline</span>
                   <span class="tag">Agritech</span>
                 </div>
-                <div class="project-key">Focus: End‑to‑end ML workflows and practical impact.</div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-thumb">
-                3D‑CNN – HAR
-              </div>
-              <div class="project-body">
-                <h3 class="project-title">Human Activity Recognition Using ML & 3D‑CNN</h3>
-                <p class="project-description">
-                  Human activity recognition system using the UCF‑50 dataset and 3D‑CNN models to classify different activities from video data. 
-                </p>
-                <div class="project-meta">
-                  <span class="tag">3D‑CNN</span>
-                  <span class="tag">UCF‑50</span>
-                  <span class="tag">Computer Vision</span>
-                </div>
-                <div class="project-key">Focus: Deep learning, sequence modeling.</div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-thumb">
-                MIMO-OTFS & More
-              </div>
-              <div class="project-body">
-                <h3 class="project-title">Additional Technical Projects</h3>
-                <p class="project-description">
-                  Worked on MIMO‑OTFS simulation in MATLAB, an ESP32‑CAM live streaming robot for surveillance, and an RRAM‑based ternary logic simulator for advanced circuit design. 
-                </p>
-                <div class="project-meta">
-                  <span class="tag">MATLAB</span>
-                  <span class="tag">ESP32‑CAM</span>
-                  <span class="tag">RRAM</span>
-                  <span class="tag">Ternary Logic</span>
-                </div>
-                <div class="project-key">Focus: Communications, robotics, emerging logic circuits.</div>
+                <div class="project-key">Focus: End-to-end ML workflows and practical impact.</div>
               </div>
             </article>
           </div>
@@ -1146,20 +1116,19 @@
           <div class="section-header">
             <h2 class="section-title">Experience</h2>
             <p class="section-subtitle">
-              Academic and project-based experience that reflects ownership, experimentation, and a focus on building practical, high‑impact systems. 
+              Academic and project-based experience that reflects ownership, experimentation, and a focus on building practical, high-impact systems.
             </p>
           </div>
 
           <div class="timeline">
             <div class="timeline-item">
-              <div class="timeline-role">Software‑Focused ECE Student</div>
+              <div class="timeline-role">Software-Focused ECE Student</div>
               <div class="timeline-org">KL University</div>
-              <div class="timeline-meta">2023 – Present · Guntur / Hyderabad (Remote & On‑Campus)</div>
+              <div class="timeline-meta">2023 – Present · Guntur / Hyderabad (Remote & On-Campus)</div>
               <p class="timeline-desc">
-                Working across software development, communication systems, and embedded designs through structured coursework and projects. Responsibilities include designing simulations, implementing AI models, building IoT prototypes, and collaborating on project documentation and presentations. 
+                Working across software development, communication systems, and embedded designs through structured coursework and projects. Responsibilities include designing simulations, implementing AI models, building IoT prototypes, and collaborating on project documentation and presentations.
               </p>
             </div>
-            <!-- Add internships or roles here when available -->
           </div>
         </div>
       </section>
@@ -1170,7 +1139,7 @@
           <div class="section-header">
             <h2 class="section-title">Education</h2>
             <p class="section-subtitle">
-              Strong academic performance with a deep focus on electronics, communication, and software-centric engineering. 
+              Strong academic performance with a deep focus on electronics, communication, and software-centric engineering.
             </p>
           </div>
 
@@ -1180,7 +1149,7 @@
               <div class="timeline-org">KL University</div>
               <div class="timeline-meta">2023 – Present · CGPA: 9.54</div>
               <p class="timeline-desc">
-                Building a foundation in communication systems, embedded electronics, and software engineering, complemented by hands‑on work in AI/ML, IoT, and simulation-based research. 
+                Building a foundation in communication systems, embedded electronics, and software engineering, complemented by hands-on work in AI/ML, IoT, and simulation-based research.
               </p>
             </div>
 
@@ -1189,7 +1158,7 @@
               <div class="timeline-org">Narayana Junior College</div>
               <div class="timeline-meta">Completed in 2023 · 98%</div>
               <p class="timeline-desc">
-                Completed MPC with a strong grounding in mathematics and physics, laying the analytical base for engineering studies. 
+                Completed MPC with a strong grounding in mathematics and physics, laying the analytical base for engineering studies.
               </p>
             </div>
           </div>
@@ -1202,7 +1171,7 @@
           <div class="section-header">
             <h2 class="section-title">Certificates & Achievements</h2>
             <p class="section-subtitle">
-              Industry-recognized certifications that complement technical skills and validate readiness for real-world engineering challenges. 
+              Industry-recognized certifications that complement technical skills and validate readiness for real-world engineering challenges.
             </p>
           </div>
 
@@ -1234,7 +1203,7 @@
           <div class="section-header">
             <h2 class="section-title">Contact</h2>
             <p class="section-subtitle">
-              Open to internships, collaborative projects, and research‑driven opportunities in software, AI/ML, and embedded systems.
+              Open to internships, collaborative projects, and research-driven opportunities in software, AI/ML, and embedded systems.
             </p>
           </div>
 
@@ -1277,7 +1246,7 @@
               <div>
                 <div class="contact-item-label">GitHub</div>
                 <a class="contact-link" href="#" target="_blank" rel="noopener">
-                  github.com/your-username <span>(to be added)</span>
+                  https://github.com/CharanTeja-27<span></span>
                 </a>
               </div>
             </div>
@@ -1299,7 +1268,6 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-    // You can later add scroll-reveal animations and resume-based auto-population (JSON) here.
   </script>
 </body>
 </html>
